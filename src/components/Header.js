@@ -1,12 +1,11 @@
-import logo from '../Images/logo.svg'
+import logo from "../Images/logo.svg";
 
-function Header () {
+function Header() {
+  return (
+    <header className="header">
+      <img className="header__logo" src={logo} alt="Around the US logo" />
+    </header>
+  );
+}
 
-    return (
-<header className="header">
-          <img className="header__logo" src={logo} alt="Around the US logo" />
-        </header>
-    )
-}        
-
-export default Header
+export default Header;

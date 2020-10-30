@@ -2,14 +2,23 @@
 
 .header {
     height: 74px;
-    padding: 45px 199px 0 0;
+    margin: 45px 199px 0 199px;
     border-bottom: 1px solid rgb(84,84,84, .7);
+    align-self: left;
+    width: 890px;
+}
+
+@media screen and (max-width: 935px) {
+    .header {
+        width: 588px;
+        height: auto;
+    }
 }
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 600px) {
     .header {
-        height: auto;
+        width:100%;
     }
 }
 

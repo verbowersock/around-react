@@ -3,9 +3,9 @@ import { api } from "../utils/api.js";
 import Card from "./Card";
 
 function Main(props) {
-  const [userName, setUserName] = react.useState();
-  const [userDescription, setUserDescription] = react.useState();
-  const [userAvatar, setUserAvatar] = react.useState();
+  const [userName, setUserName] = react.useState(null);
+  const [userDescription, setUserDescription] = react.useState(null);
+  const [userAvatar, setUserAvatar] = react.useState(null);
   const [cards, setCards] = react.useState([]);
 
   react.useEffect(() => {

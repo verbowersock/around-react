@@ -35,7 +35,7 @@ getUserInfo(){
     })
     }
 
-updateUserInfo(newName, newAbout){
+updateUserInfo(newInfo){
     return fetch(this.url+"users/me", {
         method: "PATCH",
         headers: {
@@ -43,8 +43,8 @@ updateUserInfo(newName, newAbout){
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            name: newName,
-            about: newAbout
+            name: newInfo.name,
+            about: newInfo.about
         })
     })
     .then(res=> {
@@ -56,7 +56,7 @@ updateUserInfo(newName, newAbout){
         })
     }
 
-postNewCard(title, imageLink) {
+postNewCard(newCard) {
         return fetch(this.url+"cards", {
             method: "POST",
             headers: {
@@ -64,8 +64,8 @@ postNewCard(title, imageLink) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name: title,
-                link: imageLink
+                name: newCard.title,
+                link: newCard.url
             })
         })
         .then(res=> {

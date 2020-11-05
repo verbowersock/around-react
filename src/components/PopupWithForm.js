@@ -3,7 +3,7 @@ function PopupWithForm(props) {
   return (
     <div className={`popup popup_form-${props.name} ${isOpen}`}>
       <div className="popup__content">
-        <form className={`popup__form popup__form_${props.name}`} noValidate>
+        <form className={`popup__form popup__form_${props.name}`} noValidate onSubmit={props.onSubmit}>
           <button
             name="close_button"
             className={`popup__close popup__close_form-${props.name}`}
@@ -14,12 +14,6 @@ function PopupWithForm(props) {
           </button>
           <h2 className="popup__title">{props.title}</h2>
           {props.children}
-          <input
-            type="submit"
-            className="popup__save"
-            aria-label="Save"
-            defaultValue="Save"
-          />
         </form>
       </div>
     </div>
